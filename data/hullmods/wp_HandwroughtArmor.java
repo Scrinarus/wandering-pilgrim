@@ -11,4 +11,9 @@ public class wp_HandwroughtArmor extends BaseHullMod {
     public void applyEffectsBeforeShipCreation(HullSize hullSize, MutableShipStatsAPI stats, String id) {
         stats.getArmorBonus().modifyFlat(id, (Float) HANDWROUGHT_REDUCTION);
     }
+
+    public String getDescriptionParam(int index, HullSize hullSize) {
+		if (index == 0) return "5000";
+		return null;
+	}
 }

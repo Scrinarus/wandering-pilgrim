@@ -13,9 +13,9 @@
   "viewOffset": 0,
   "builtInMods": [
     "hbi",
-    "ablative_armor",
     "distributed_fire_control",
-    "vast_hangar"
+    "wp_GoliathHangar",
+    "wp_HandwroughtArmor"
   ],
   "builtInWeapons": {
     "WS 001": "hellbore",

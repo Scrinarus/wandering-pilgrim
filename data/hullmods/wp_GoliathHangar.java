@@ -19,4 +19,10 @@ public class wp_GoliathHangar extends BaseHullMod {
                 stats.getDynamic().getMod(Stats.CONVERTED_HANGAR_NO_REFIT_PENALTY).modifyFlat(id, 1f);
         }
 
+        public String getDescriptionParam(int index, HullSize hullSize) {
+		if (index == 0) return "2";
+		if (index == 1) return "4";
+		return null;
+	}
+
 }

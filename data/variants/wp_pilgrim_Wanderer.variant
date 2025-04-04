@@ -1,20 +1,19 @@
 {
-  "variantId": "wp_pilgrim_Default",
+  "variantId": "wp_pilgrim_Wanderer",
   "hullId": "wp_pilgrim",
-  "displayName": "Default",
+  "displayName": "Rogue Luddic",
   "goalVariant": false,
-  "fluxCapacitors": 2,
+  "fluxCapacitors": 0,
   "fluxVents": 50,
   "quality": 1,
   "hullMods": [
-        "additional_berthing"
-    ],
-    "permaMods": [
-        "additional_berthing"
-    ],
-    "sMods": [
-        "additional_berthing"
-    ],
+    "additional_berthing",
+    "converted_hangar",
+    "blast_doors",
+    "reinforcedhull"
+  ],
+  "permaMods": ["additional_berthing"],
+  "sMods": ["additional_berthing"],
   "weaponGroups": [
     {
       "autofire": true,
@@ -40,6 +39,8 @@
   "modules": [],
   "wings": [
     "broadsword_wing",
-    "perdition_wing"
+    "perdition_wing",
+    "sarissa_wing",
+    "sarissa_wing"
   ]
 }
