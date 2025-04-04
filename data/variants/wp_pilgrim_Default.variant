@@ -1,0 +1,45 @@
+{
+  "variantId": "wp_pilgrim_Default",
+  "hullId": "wp_pilgrim",
+  "displayName": "Default",
+  "goalVariant": false,
+  "fluxCapacitors": 2,
+  "fluxVents": 50,
+  "quality": 1,
+  "hullMods": [
+        "additional_berthing"
+    ],
+    "permaMods": [
+        "additional_berthing"
+    ],
+    "sMods": [
+        "additional_berthing"
+    ],
+  "weaponGroups": [
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 001": "hellbore",
+        "WS 010": "hellbore",
+        "WS0003": "hellbore",
+        "WS0004": "hellbore"
+      }
+    },
+    {
+      "autofire": true,
+      "mode": "LINKED",
+      "weapons": {
+        "WS 000": "devastator",
+        "WS 005": "devastator",
+        "WS 006": "devastator",
+        "WS 026": "devastator"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": [
+    "broadsword_wing",
+    "perdition_wing"
+  ]
+}

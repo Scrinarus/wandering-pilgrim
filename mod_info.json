@@ -1,0 +1,10 @@
+{
+	"id":"wandering_pilgrim",
+	"name":"Wandering Pilgrim",
+	"author":"Scrinarus",
+	"version":{ "major": '1', "minor": '0', "patch": '0' },
+	"description":"A lore friendly Luddic focused Invictus mobile colony",
+	"gameVersion":"0.98a",
+	"jars":[],
+	"dependencies": [],
+}
