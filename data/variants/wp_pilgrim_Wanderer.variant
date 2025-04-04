@@ -3,14 +3,15 @@
   "hullId": "wp_pilgrim",
   "displayName": "Rogue Luddic",
   "goalVariant": false,
-  "fluxCapacitors": 0,
+  "fluxCapacitors": 4,
   "fluxVents": 50,
   "quality": 1,
   "hullMods": [
     "additional_berthing",
-    "converted_hangar",
     "blast_doors",
-    "reinforcedhull"
+    "reinforcedhull",
+    "autorepair",
+    "armoredweapons"
   ],
   "permaMods": ["additional_berthing"],
   "sMods": ["additional_berthing"],
@@ -40,7 +41,5 @@
   "wings": [
     "broadsword_wing",
     "perdition_wing",
-    "sarissa_wing",
-    "sarissa_wing"
   ]
 }
