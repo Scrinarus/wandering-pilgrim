@@ -6,7 +6,7 @@ import com.fs.starfarer.api.combat.ShipAPI.HullSize;
 import com.fs.starfarer.api.impl.campaign.ids.Stats;
 
 public class wp_HandwroughtArmor extends BaseHullMod {
-	public static float HANDWROUGHT_REDUCTION = -5000f;
+	public static float HANDWROUGHT_REDUCTION = 0f;
     
     public void applyEffectsBeforeShipCreation(HullSize hullSize, MutableShipStatsAPI stats, String id) {
         stats.getArmorBonus().modifyFlat(id, (Float) HANDWROUGHT_REDUCTION);

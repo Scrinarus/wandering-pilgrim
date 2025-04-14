@@ -1,0 +1,7 @@
+name,id,tier,rarity,tech/manufacturer,tags,uiTags,base value,unlocked,hidden,hiddenEverywhere,cost_frigate,cost_dest,cost_cruiser,cost_capital,script,desc,short,sModDesc,sprite,
+Goliath Hangar,wp_GoliathHangar,,,,,,,,TRUE,,0,0,0,0,data.hullmods.wp_GoliathHangar,"The original Invictus hangar bay is massive by Sector standards, but still not large enough to support the Wandering Pilgrim's population. To remedy this, the hangar bays have been greatly expanded and bulkheads removed to retrofit the structure into a miniature spaceport. This provides space for built-in fighter bays, with room for additional nanoforge capacity to be brought online. 
+
+The base number of fighter bays is %s, and installing Converted Hangars increases the number of bays to %s and negates all penalties from Converted Hangar",Increases the effect of Converted Hangar and removes its penalities.,,graphics/hullmods/wp_goliath_hangar.png,
+Handwrought Armor,wp_HandwroughtArmor,,,,,,,,TRUE,,0,0,0,0,data.hullmods.wp_HandwroughtArmor,"Nearly a half-century of minor but constant modifications and repair to the Wandering Pilgrim's outer hull has resulted in an armor scheme completely different to that of the original Invictus. 
+
+Subpar material and construction quality reduces total armor by %s, but the new layers have been constructed with modern knowledge of armor schemes, entirely negating the effects of the Ablative Armor hullmod.",Reduces total armor but makes armor non-ablative.,,graphics/hullmods/wp_handwrought_armor2.png,
