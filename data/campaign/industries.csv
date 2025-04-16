@@ -1,7 +1,8 @@
 id,name,cost mult,build time,income,upkeep,downgrade,upgrade,tags,data,image,plugin,desc,order,disruptDanger
 ,,,,,,,,,,,,,,
-wp_support_fleet,Support Fleet,,,,0,,,"codex_unlockable, patrol, station","{
+wp_support_fleet,Support Fleet,,,,0,,,"codex_unlockable, industry",,graphics/illustrations/freighters.jpg,src.campaign.econ.wp_support_fleet,Please let this be a normal field trip. With the Pilgrim? No way! Awwwwh.,2000,
+wp_home_guard,Home Guard,,,,0,,,"station, starfortress, unraidable, structure, codex_unlockable","{
 radius:70,
-variant:wp_pilgrim_Wanderer.variant,
+variant:wp_pilgrim_Wanderer,
 fleetName:Wandering Pilgrim,
-}",graphics/illustrations/freighters.jpg,src.campaign.econ.wp_support_fleet,Please let this be a normal field trip. With the Pilgrim? No way! Awwwwh.,2000,
+}",graphics/illustrations/jangala_station.jpg,src.campaign.econ.wp_home_guard,This description is for the Home Guard.,1500,

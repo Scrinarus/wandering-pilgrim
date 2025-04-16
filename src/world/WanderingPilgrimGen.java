@@ -35,7 +35,8 @@ public class WanderingPilgrimGen {
                         Industries.POPULATION,
                         Industries.SPACEPORT,
                         Industries.COMMERCE,
-                        "wp_support_fleet"
+                        "wp_support_fleet",
+                        "wp_home_guard"
                         )),
                 new ArrayList(Arrays.asList(
                         Submarkets.SUBMARKET_OPEN,

@@ -1,3 +1,5 @@
 /.idea
 /.vscode
-/jars/production/WanderingPilgrim
+/jars/production
+/META-INF
+WanderingPilgrim.iml
