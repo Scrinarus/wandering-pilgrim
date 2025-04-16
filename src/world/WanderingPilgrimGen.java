@@ -19,7 +19,8 @@ public class WanderingPilgrimGen {
         //target Mazalot in Zagan and put Pilgrim in Orbit
 		StarSystemAPI system = Global.getSector().getStarSystem("Zagan");
         SectorEntityToken wanderingPilgrimStation = system.addCustomEntity("wandering_pilgrim_station", "Wandering Pilgrim", "wp_pilgrim", "luddic_church");
-        wanderingPilgrimStation.setCircularOrbitPointingDown(system.getEntityById("mazalot"), 90f, pilgrimDistMazalot, 40f);
+        wanderingPilgrimStation.setCircularOrbitPointingDown(system.getEntityById("mazalot"), 0.6f, pilgrimDistMazalot, 40f);
+        wanderingPilgrimStation.setCustomDescriptionId("wp_pilgrim_station_mazalot");
 
         //generate appropriate market
         MarketAPI wanderingPilgrimMarket = addMarketplace.addMarketplace("luddic_church",wanderingPilgrimStation,
@@ -34,7 +35,7 @@ public class WanderingPilgrimGen {
                         Industries.POPULATION,
                         Industries.SPACEPORT,
                         Industries.COMMERCE,
-                        Industries.LIGHTINDUSTRY
+                        "wp_support_fleet"
                         )),
                 new ArrayList(Arrays.asList(
                         Submarkets.SUBMARKET_OPEN,

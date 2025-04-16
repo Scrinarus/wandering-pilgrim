@@ -1,15 +1,15 @@
 {
   "wp_pilgrim":{
 "defaultName":"Wandering Pilgrim",
-"defaultRadius":45,
-"customDescriptionId":"orbital_station_default",
+"defaultRadius":50,
+"customDescriptionId":"wp_pilgrim_station_mazalot",
 "interactionImage":"graphics/illustrations/luddic_church.jpg",
 "icon":"graphics/icons/station_habitat.png",
 "iconWidth":25,
 "iconHeight":25,
 "sprite":"graphics/stations/wp_pilgrim.png",
 "spriteWidth":75,
-"spriteHeight":100,
+"spriteHeight":75,
 "renderShadow":true,
 "useLightColor":true,
 "showInCampaign":true,
