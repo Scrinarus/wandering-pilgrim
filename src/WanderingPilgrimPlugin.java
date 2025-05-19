@@ -1,8 +1,9 @@
 package src;
 
 import com.fs.starfarer.api.BaseModPlugin;
-import com.fs.starfarer.api.EveryFrameScript;
 import com.fs.starfarer.api.Global;
+import src.campaign.econ.wp_DescriptionSetter;
+import src.campaign.econ.wp_PilgrimMovement;
 import src.world.WanderingPilgrimGen;
 
 public class WanderingPilgrimPlugin extends BaseModPlugin{
@@ -18,28 +19,10 @@ public class WanderingPilgrimPlugin extends BaseModPlugin{
     @Override
     public void onGameLoad(boolean newGame)
     {
-        Global.getSector().addTransientScript(new WanderingPilgrimPlugin.exampleEveryFrameScript());
-    }
-
-    public class exampleEveryFrameScript implements EveryFrameScript {
-
-        @Override
-        public boolean isDone()
-        {
-            return false;
-        }
-
-        @Override
-        public boolean runWhilePaused()
-        {
-            return false;
-        }
-
-        @Override
-        public void advance(float amount)
-        {
-            System.out.println("here's a message!");
-        }
+        if (!Global.getSector().getListenerManager().hasListenerOfClass(wp_DescriptionSetter.class))
+            Global.getSector().getListenerManager().addListener(new wp_DescriptionSetter());
+        if (!Global.getSector().getListenerManager().hasListenerOfClass(wp_PilgrimMovement.class))
+            Global.getSector().getListenerManager().addListener(new wp_PilgrimMovement(true));
     }
 
 }
