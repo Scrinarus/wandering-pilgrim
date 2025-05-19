@@ -20,7 +20,7 @@ public class WanderingPilgrimGen {
 		StarSystemAPI system = Global.getSector().getStarSystem("Zagan");
         SectorEntityToken wanderingPilgrimStation = system.addCustomEntity("wandering_pilgrim_station", "Wandering Pilgrim", "wp_pilgrim", "luddic_church");
         wanderingPilgrimStation.setCircularOrbitPointingDown(system.getEntityById("mazalot"), 0.6f, pilgrimDistMazalot, 40f);
-        wanderingPilgrimStation.setCustomDescriptionId("wp_pilgrim_station_mazalot");
+        wanderingPilgrimStation.setCustomDescriptionId("wp_pilgrim_station_hyperspace");
 
         //generate appropriate market
         MarketAPI wanderingPilgrimMarket = addMarketplace.addMarketplace("luddic_church",wanderingPilgrimStation,
