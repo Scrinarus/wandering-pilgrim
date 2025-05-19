@@ -6,73 +6,67 @@ import com.fs.starfarer.api.campaign.SectorEntityToken;
 import com.fs.starfarer.api.campaign.StarSystemAPI;
 
 public class wp_PilgrimMovement extends BaseCampaignEventListener {
+    //original movement code written by Scrinarus
+    //much cleaner code refactor performed by Mezzelo
+
     public wp_PilgrimMovement(boolean permaRegister) {
         super(permaRegister);
     }
+    private class PilgrimLocationInfo {
+        private String systemName;
+        private String orbitTarget;
+        private float orbitDist;
+        private float orbitDays;
+        public PilgrimLocationInfo(String systemName, String orbitTarget, float orbitDist, float orbitDays) {
+            this.systemName = systemName;
+            this.orbitTarget = orbitTarget;
+            this.orbitDist = orbitDist;
+            this.orbitDays = orbitDays;
+        }
+    }
+    final PilgrimLocationInfo[] systemRoute = {
+            new PilgrimLocationInfo("zagan", "mazalot", 350f, 40f),
+            new PilgrimLocationInfo("askonia", "volturn", 350f, 40f),
+            new PilgrimLocationInfo("canaan", "gilead", 350f, 40f),
+            new PilgrimLocationInfo("corvus", "jangala", 350f, 40f),
+            new PilgrimLocationInfo("yma", "killa", 350f, 40f),
+            new PilgrimLocationInfo("kumari_kandam", "beholder_station", 350f, 40f),
+            new PilgrimLocationInfo("eos_exodus", "hesperus", 350f, 40f),
+    };
 
     @Override
     public void reportEconomyMonthEnd() {
-        //distance setting
-        final float pilgrimDistMazalot = 350f;
-        final float pilgrimDistVolturn = 350f;
-        final float pilgrimDistGilead = 350f;
-        final float pilgrimDistJangala = 350f;
-        final float pilgrimDistKilla = 350f;
-        final float pilgrimDistBeholder = 350f;
-        final float pilgrimDistHesperus = 350f;
-        boolean movedPilgrim = false;
-        if (Global.getSector().getClock().getDay() == 1 && !movedPilgrim) {
-            System.out.println("Pilgrim movement in progress!");
 
-            //all potential systems with the Pilgrim in them
-            StarSystemAPI zagan = Global.getSector().getStarSystem("Zagan");
-            StarSystemAPI askonia = Global.getSector().getStarSystem("Askonia");
-            StarSystemAPI canaan = Global.getSector().getStarSystem("Canaan");
-            StarSystemAPI corvus = Global.getSector().getStarSystem("Corvus");
-            StarSystemAPI yma = Global.getSector().getStarSystem("Yma");
-            StarSystemAPI kumari = Global.getSector().getStarSystem("Kumari_Kandam");
-            StarSystemAPI exodus = Global.getSector().getStarSystem("Eos_Exodus");
-            //find the pilgrim
-            SectorEntityToken wanderingPilgrimStation = Global.getSector().getEntityById("wandering_pilgrim_station");
+        SectorEntityToken wanderingPilgrimStation = Global.getSector().getEntityById("wandering_pilgrim_station");
+        if (wanderingPilgrimStation == null)
+            return;
 
-            //move the Pilgrim
-            if (wanderingPilgrimStation.getContainingLocation().getId().equals("zagan")) {
-                zagan.removeEntity(wanderingPilgrimStation);
-                askonia.addEntity(wanderingPilgrimStation);
-                wanderingPilgrimStation.setCircularOrbitPointingDown(Global.getSector().getEntityById("volturn"), 0.6f, pilgrimDistVolturn, 40f);
-            } else if (wanderingPilgrimStation.getContainingLocation().getId().equals("askonia")) {
-                askonia.removeEntity(wanderingPilgrimStation);
-                canaan.addEntity(wanderingPilgrimStation);
-                wanderingPilgrimStation.setCircularOrbitPointingDown(Global.getSector().getEntityById("gilead"), 0.6f, pilgrimDistGilead, 40f);
-            } else if (wanderingPilgrimStation.getContainingLocation().getId().equals("canaan")) {
-                canaan.removeEntity(wanderingPilgrimStation);
-                corvus.addEntity(wanderingPilgrimStation);
-                wanderingPilgrimStation.setCircularOrbitPointingDown(Global.getSector().getEntityById("jangala"), 0.6f, pilgrimDistJangala, 40f);
-            } else if (wanderingPilgrimStation.getContainingLocation().getId().equals("corvus")) {
-                corvus.removeEntity(wanderingPilgrimStation);
-                yma.addEntity(wanderingPilgrimStation);
-                wanderingPilgrimStation.setCircularOrbitPointingDown(Global.getSector().getEntityById("killa"), 0.6f, pilgrimDistKilla, 40f);
-            } else if (wanderingPilgrimStation.getContainingLocation().getId().equals("yma")) {
-                yma.removeEntity(wanderingPilgrimStation);
-                kumari.addEntity(wanderingPilgrimStation);
-                wanderingPilgrimStation.setCircularOrbitPointingDown(Global.getSector().getEntityById("beholder_station"), 0.6f, pilgrimDistBeholder, 40f);
-            } else if (wanderingPilgrimStation.getContainingLocation().getId().equals("kumari_kandam")) {
-                kumari.removeEntity(wanderingPilgrimStation);
-                exodus.addEntity(wanderingPilgrimStation);
-                wanderingPilgrimStation.setCircularOrbitPointingDown(Global.getSector().getEntityById("hesperus"), 0.6f, pilgrimDistHesperus, 40f);
-            } else if (wanderingPilgrimStation.getContainingLocation().getId().equals("eos_exodus")) {
-                exodus.removeEntity(wanderingPilgrimStation);
-                zagan.addEntity(wanderingPilgrimStation);
-                wanderingPilgrimStation.setCircularOrbitPointingDown(Global.getSector().getEntityById("mazalot"), 0.6f, pilgrimDistMazalot, 40f);
+        int containing = -1;
+        int destination = -1;
+        for (int i = 0; i < systemRoute.length && containing < 0; i++) {
+            if (wanderingPilgrimStation.getContainingLocation().getId().equals(systemRoute[i].systemName)) {
+                containing = i;
+                for (int g = 1; g < systemRoute.length; g++) {
+                    int searchIndex = (i + g) % systemRoute.length;
+                    // logic would go in this conditional to ensure the target location is valid (i.e. no hostilities)
+                    if (true) {
+                        destination = searchIndex;
+                        break;
+                    }
+                }
             }
-            movedPilgrim = true;
-            System.out.println("Pilgrim new location:");
-            System.out.println(wanderingPilgrimStation.getContainingLocation().getId());
         }
 
-        if (Global.getSector().getClock().getDay() == 15){
-            System.out.println("Pilgrim status reset!");
-            movedPilgrim = false;
+        if (containing > -1 && destination > -1) {
+            Global.getSector().getStarSystem(systemRoute[containing].systemName).removeEntity(wanderingPilgrimStation);
+            Global.getSector().getStarSystem(systemRoute[destination].systemName).addEntity(wanderingPilgrimStation);
+            wanderingPilgrimStation.setCircularOrbitPointingDown(
+                    Global.getSector().getEntityById(systemRoute[destination].orbitTarget),
+                    0.6f,
+                    systemRoute[destination].orbitDist,
+                    systemRoute[destination].orbitDays
+            );
         }
+
     }
 }
