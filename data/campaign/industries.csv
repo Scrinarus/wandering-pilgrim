@@ -1,8 +1,14 @@
 id,name,cost mult,build time,income,upkeep,downgrade,upgrade,tags,data,image,plugin,desc,order,disruptDanger
 ,,,,,,,,,,,,,,
-wp_support_fleet,Support Fleet,,,,0,,,"codex_unlockable, industry",,graphics/illustrations/freighters.jpg,src.campaign.econ.wp_support_fleet,Please let this be a normal field trip. With the Pilgrim? No way! Awwwwh.,2000,
+wp_support_fleet,Support Fleet,,,,0,,,"codex_unlockable, industry",,graphics/illustrations/freighters.jpg,src.campaign.econ.wp_support_fleet,"The Pilgrim is always surrounded by a veritable flotilla of civilian and support craft. Many of these are hulls that have joined the Pilgrim on this latest voyage, but several are permnant hulls, orbiting the Pilgrim and assisting in its maintenance, both hull and crew. 
+
+Among these ships are Starliners converted to hydroponics growth suites, Salvage Rigs and Ventures keyed to perform asteroid mining, and manufactory Coloussi to produce needed consumer goods.",2000,
 wp_home_guard,Home Guard,,,,0,,,"station, starfortress, unraidable, structure, codex_unlockable","{
 radius:70,
 variant:wp_pilgrim_Wanderer,
 fleetName:Wandering Pilgrim,
-}",graphics/illustrations/jangala_station.jpg,src.campaign.econ.wp_home_guard,This description is for the Home Guard.,1500,
+}",graphics/illustrations/jangala_station.jpg,src.campaign.econ.wp_home_guard,"The Wandering Pilgrim is home to thousands, and has generational knowledge of its bulkheads and airlocks that stretch back to the dawn of the First AI War. 
+
+Defensively, this is equivalent to a starfortress, both in ground combat strength and stability modifiers. 
+
+Additionally, if engaged in fleet combat, the Pilgrim will serve in its own defense, ancient LIDAR arrays burning the paint off any hull unfortunate enough to meet it in battle.",1500,

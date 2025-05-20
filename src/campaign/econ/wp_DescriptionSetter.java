@@ -32,9 +32,9 @@ public class wp_DescriptionSetter implements ColonyInteractionListener {
                 wanderingPilgrimStation.setCustomDescriptionId("wp_pilgrim_station_jangala");
             } else if (wanderingPilgrimStation.getContainingLocation().getId().equals("yma")) {
                 wanderingPilgrimStation.setCustomDescriptionId("wp_pilgrim_station_killa");
-            } else if (wanderingPilgrimStation.getContainingLocation().getId().equals("kumari_kandam")) {
+            } else if (wanderingPilgrimStation.getContainingLocation().getId().equals("kumari kandam")) {
                 wanderingPilgrimStation.setCustomDescriptionId("wp_pilgrim_station_beholder");
-            } else if (wanderingPilgrimStation.getContainingLocation().getId().equals("eos_exodus")) {
+            } else if (wanderingPilgrimStation.getContainingLocation().getId().equals("eos exodus")) {
                 wanderingPilgrimStation.setCustomDescriptionId("wp_pilgrim_station_hesperus");
             } else {
                 wanderingPilgrimStation.setCustomDescriptionId("wp_pilgrim_station_hyperspace");

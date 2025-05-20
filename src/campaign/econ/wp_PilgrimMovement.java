@@ -26,17 +26,17 @@ public class wp_PilgrimMovement extends BaseCampaignEventListener {
         }
     }
     final PilgrimLocationInfo[] systemRoute = {
-            new PilgrimLocationInfo("zagan", "mazalot", 350f, 40f),
-            new PilgrimLocationInfo("askonia", "volturn", 350f, 40f),
-            new PilgrimLocationInfo("canaan", "gilead", 350f, 40f),
-            new PilgrimLocationInfo("corvus", "jangala", 350f, 40f),
-            new PilgrimLocationInfo("yma", "killa", 350f, 40f),
-            new PilgrimLocationInfo("kumari kandam", "beholder_station", 350f, 40f),
-            new PilgrimLocationInfo("eos exodus", "hesperus", 350f, 40f),
+            new PilgrimLocationInfo("zagan", "mazalot", 350f, 35f),
+            new PilgrimLocationInfo("askonia", "volturn", 200f, 20f),
+            new PilgrimLocationInfo("canaan", "gilead", 350f, 35f),
+            new PilgrimLocationInfo("corvus", "jangala", 350f, 35f),
+            new PilgrimLocationInfo("yma", "killa", 150f, 15f),
+            new PilgrimLocationInfo("kumari kandam", "beholder_station", 100f, 10f),
+            new PilgrimLocationInfo("eos exodus", "hesperus", 350f, 35f),
     };
 
     //handle how long the Pilgrim idles for, and changes it to move only once every interval via flags
-    final float interval = 3f;
+    final float interval = 2f;
     boolean isMoved = false;
 
     @Override

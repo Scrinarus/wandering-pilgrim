@@ -1,6 +1,6 @@
 # wandering-pilgrim
 A mod for Starsector focusing on a traveling Luddic Invictus Colony. The goal is primarily to focus on story writing, utilizing Arthr's Arkoship code when he completes making it portable into other mods. 
-Until then, the Pilgrim uses a simplified movement system, teleporting between the Pilgrim's Path shrines as well as Mazalot on the first of each month.
+Until then, the Pilgrim uses a simplified movement system, teleporting between the Pilgrim's Path shrines as well as Mazalot on a routine basis.
 
 Credits -
  
