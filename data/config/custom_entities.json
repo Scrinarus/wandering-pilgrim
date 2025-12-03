@@ -17,7 +17,7 @@
 "showNameOnMap":false,
 "scaleNameWithZoom":false,
 "scaleIconWithZoom":true,
-"tags":["station"],
+"tags":["station", "use_station_visual"],
 "layers":[STATIONS],
 },
 }
